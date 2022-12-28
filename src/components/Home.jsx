@@ -7,7 +7,7 @@ const Home = () => {
   const [parentId, setparentId] = useState(null);
   const [clickedId, setClickedId] = useState();
   const [title, setTitle] = useState("");
-  const [due, setDue] = useState();
+  const [due, setDue] = useState("");
   const [parent, setParent] = useState(null);
 
 
@@ -26,6 +26,10 @@ const Home = () => {
         "http://18.208.183.190/api/tasks/",
         body
       );
+      setOpen(!open)
+      setTitle("")
+      setDue("")
+      setParent(null)
     } catch (error) {
       console.log(error);
     }
